@@ -1,12 +1,14 @@
 
-#include "float.h"
+#include "if.h"
 
-Float::Float(const string & name)
- : Variable(name)
+If::If(const string & label)
+ : NonexecutableStatement(label),
+   statement(NULL)
 {
 }
 //----------------------------------------------------------------
-Float::~Float()
+If::~If()
 {
+	delete statement;
 }
 //----------------------------------------------------------------

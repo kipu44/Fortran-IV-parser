@@ -14,7 +14,7 @@ GoTo::~GoTo()
 //----------------------------------------------------------------
 string GoTo::toCPlusPlus(const int & indent)
 {
-	return string(indent, '\t') + "goto " + target->toCPlusPlus(false) + ";\n";
+	return label->toCPlusPlus(true) + string(indent, '\t') + "goto " + target->toCPlusPlus(false) + ";\n";
 }
 //----------------------------------------------------------------
 string GoTo::toFortran(const int & indent)

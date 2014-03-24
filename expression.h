@@ -3,11 +3,15 @@
 #define __EXPRESSION_H__
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
 class Expression
 {
+	protected:
+		static const bool trace = 0;
+
 	public:
 		Expression();
 

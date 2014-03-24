@@ -10,10 +10,6 @@ class Int : public Variable
 		Int(const string & name);
 
 		virtual ~Int();
-
-		virtual string toCPlusPlus();
-
-		virtual string toFortran();
 };
 
 #endif

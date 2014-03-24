@@ -7,9 +7,18 @@
 class AritmeticExpression : public Expression
 {
 	private:
+		static const bool trace = Expression::trace;
+
 	public:
-		AritmeticExpression();
+		AritmeticExpression(const string & text);
 		virtual ~AritmeticExpression();
+
+		virtual string toCPlusPlus();
+
+		virtual string toFortran();
+
+	protected:
+		string text;
 };
 
 #endif

@@ -2,18 +2,20 @@
 #ifndef __VARIABLE_H__
 #define __VARIABLE_H__
 
-#include "constant.h"
+#include <string>
 
-class Variable : public Constant
+using namespace std;
+
+class Variable
 {
 	public:
 		Variable(const string & name);
 
 		virtual ~Variable();
 
-		virtual string toCPlusPlus() = 0;
+		virtual string toCPlusPlus();
 
-		virtual string toFortran() = 0;
+		virtual string toFortran();
 
 	protected:
 		const string name;

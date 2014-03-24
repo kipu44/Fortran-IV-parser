@@ -6,9 +6,10 @@
 
 class ExecutableStatement : public Statement
 {
-	public:
-		static const bool trace = 0;
+	protected:
+		static const bool trace = Statement::trace;
 
+	public:
 		ExecutableStatement(const string & label);
 
 		virtual ~ExecutableStatement();

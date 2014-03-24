@@ -4,6 +4,7 @@ OPTIONS = -O3 -Wall
 
 MODULS =	\
 			aritmeticExpression.o \
+			aritmeticIf.o \
 			aritmeticStatement.o \
 			block.o \
 			comment.o \
@@ -15,6 +16,7 @@ MODULS =	\
 			float.o \
 			format.o \
 			goTo.o \
+			if.o \
 			inOutStatement.o \
 			inStatement.o \
 			int.o \

@@ -2,18 +2,23 @@
 #ifndef __CONSTANT_H__
 #define __CONSTANT_H__
 
-#include "aritmeticExpression.h"
+#include <string>
 
-class Constant : public AritmeticExpression
+using namespace std;
+
+class Constant
 {
 	public:
-		Constant();
+		Constant(const string & name);
 
 		virtual ~Constant();
 
-		virtual string toCPlusPlus() = 0;
+		virtual string toCPlusPlus();
 
-		virtual string toFortran() = 0;
+		virtual string toFortran();
+
+	protected:
+		const string name;
 };
 
 #endif

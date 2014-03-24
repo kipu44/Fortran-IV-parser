@@ -10,10 +10,6 @@ class Float : public Variable
 		Float(const string & name);
 
 		virtual ~Float();
-
-		virtual string toCPlusPlus();
-
-		virtual string toFortran();
 };
 
 #endif

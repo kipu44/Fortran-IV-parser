@@ -6,7 +6,7 @@
 
 class InStatement : public InOutStatement
 {
-	private:
+	protected:
 		static const bool trace = 0;
 
 	public:

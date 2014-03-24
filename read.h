@@ -13,7 +13,7 @@ using namespace std;
 class Read : public InStatement
 {
 	private:
-		static const bool trace = 0;
+		static const bool trace = InStatement::trace;
 
 	public:
 		Read(const string & t, const string & label);

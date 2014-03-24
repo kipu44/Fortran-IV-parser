@@ -22,11 +22,36 @@ string Declarator::declareVariable(const string & type, const string & variable,
 
 	string result = "";
 
+	if(trace) cout << "\nDeclarator::declareVariable 1\n";
+
 	if(declared.count(variable) == 0)
 	{
+		if(trace) cout << "\nDeclarator::declareVariable 2\n";
+
 		declared.insert(variable);
-		result = type + " " + variable + (semicolon ? "": ";\n");
+
+		if(trace) cout << "\nDeclarator::declareVariable 3\n";
+
+		result = "";
+
+		if(trace) cout << "\nDeclarator::declareVariable 4\n" << "result: " << result << "\ntype: " << type << "\n";
+
+		result += type;
+
+		if(trace) cout << "\nDeclarator::declareVariable 5\n" << "result: " << result << "\n";
+
+		result += " ";
+
+		if(trace) cout << "\nDeclarator::declareVariable 6\n" << "result: " << result << "\nvariable: " << variable << "\n";
 	}
+	
+	result += variable;
+
+	if(trace) cout << "\nDeclarator::declareVariable 7\n" << "result: " << result << "\nsemicolon: " << semicolon << "\n";
+
+	result += (semicolon ? "": ";\n");
+
+	if(trace) cout << "\nDeclarator::declareVariable 8\n" << "result: " << result << "\n";
 
 	if(trace) cout << "\n}Declarator::declareVariable\n" << "result: " << result << "\n";
 

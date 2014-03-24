@@ -6,8 +6,9 @@
 
 class Program
 {
-	private:
-		static const bool trace = 0;
+	public:
+		static const bool trace = Block::trace;
+		static const bool debug = Block::debug;
 
 	public:
 		Program(const string & name);

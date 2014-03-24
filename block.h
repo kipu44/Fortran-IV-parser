@@ -11,7 +11,7 @@ using namespace std;
 
 class Block
 {
-	private:
+	public:
 		static const bool trace = Line::trace;
 		static const bool debug = Line::debug;
 

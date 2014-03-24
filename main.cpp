@@ -1,6 +1,6 @@
 
 #include "aritmeticStatement.h"
-// #include "aritmeticIf.h"
+#include "aritmeticIf.h"
 #include "end.h"
 #include "format.h"
 #include "goTo.h"
@@ -16,8 +16,8 @@ using namespace std;
 
 void translate(const char * fileName)
 {
-	static const bool trace = 0;
-	static const bool debug = 0;
+	static const bool trace = Program::trace;
+	static const bool debug = Program::debug;
 
 	fstream file;
 	file.open(fileName);
@@ -129,14 +129,14 @@ void translate(const char * fileName)
 
 					if(trace) cout << "\nn\n";
 				}
-				// else if(startsWith(line, "if"))
-				// {
-				// 	if(trace) cout << "\nm\n";
+				else if(startsWith(line, "if"))
+				{
+					if(trace) cout << "\nm\n";
 
-				// 	program.addLine(new AritmeticIf(line.substr(2), label));
+					program.addLine(new AritmeticIf(line.substr(2), label));
 
-				// 	if(trace) cout << "\nn\n";
-				// }
+					if(trace) cout << "\nn\n";
+				}
 				else
 				{
 					if(trace) cout << "\np\n";

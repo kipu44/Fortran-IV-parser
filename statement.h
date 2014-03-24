@@ -7,8 +7,8 @@
 
 class Statement : public Line
 {
-	private:
-		static const bool trace = 0;
+	protected:
+		static const bool trace = Line::trace;
 
 	public:
 		Statement(const string & label);
