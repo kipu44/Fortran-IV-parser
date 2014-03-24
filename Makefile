@@ -9,6 +9,7 @@ MODULS =	\
 			end.o \
 			executableStatement.o \
 			format.o \
+			goTo.o \
 			inOutStatement.o \
 			inStatement.o \
 			label.o \

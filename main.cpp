@@ -3,7 +3,7 @@
 // #include "aritmeticIf.h"
 #include "end.h"
 #include "format.h"
-// #include "goTo.h"
+#include "goTo.h"
 #include "comment.h"
 #include "program.h"
 #include "read.h"
@@ -121,14 +121,14 @@ void translate(const char * fileName)
 
 					if(trace) cout << "\nl\n";
 				}
-				// else if(startsWith(line, "go to"))
-				// {
-				// 	if(trace) cout << "\nm\n";
+				else if(startsWith(line, "go to"))
+				{
+					if(trace) cout << "\nm\n";
 
-				// 	program.addLine(new GoTo(line.substr(5), label));
+					program.addLine(new GoTo(line.substr(5), label));
 
-				// 	if(trace) cout << "\nn\n";
-				// }
+					if(trace) cout << "\nn\n";
+				}
 				// else if(startsWith(line, "if"))
 				// {
 				// 	if(trace) cout << "\nm\n";
