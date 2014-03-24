@@ -1,15 +1,14 @@
 
 // #include "aritmeticStatement.h"
 // #include "aritmeticIf.h"
-// #include "end.h"
+#include "end.h"
 #include "format.h"
 // #include "goTo.h"
 #include "comment.h"
-// #include "print.h"
 #include "program.h"
 #include "read.h"
-// #include "stop.h"
-// #include "write.h"
+#include "stop.h"
+#include "write.h"
 
 #include <fstream>
 
@@ -98,38 +97,30 @@ void translate(const char * fileName)
 
 					if(trace) cout << "\nd\n";
 				}
-				// else if(startsWith(line, "write"))
-				// {
-				// 	if(trace) cout << "\ne\n";
+				else if(startsWith(line, "write"))
+				{
+					if(trace) cout << "\ne\n";
 
-				// 	program.addLine(new Write(line.substr(6), label));
+					program.addLine(new Write(line.substr(6), label));
 
-				// 	if(trace) cout << "\nf\n";
-				// }
-				// else if(startsWith(line, "print"))
-				// {
-				// 	if(trace) cout << "\ng\n";
+					if(trace) cout << "\nf\n";
+				}
+				else if(startsWith(line, "stop"))
+				{
+					if(trace) cout << "\ni\n";
 
-				// 	program.addLine(new Print(line.substr(6), label));
+					program.addLine(new Stop(label));
 
-				// 	if(trace) cout << "\nh\n";
-				// }
-				// else if(startsWith(line, "stop"))
-				// {
-				// 	if(trace) cout << "\ni\n";
+					if(trace) cout << "\nj\n";
+				}
+				else if(startsWith(line, "end"))
+				{
+					if(trace) cout << "\nk\n";
 
-				// 	program.addLine(new Stop(label));
+					program.addLine(new End(label));
 
-				// 	if(trace) cout << "\nj\n";
-				// }
-				// else if(startsWith(line, "end"))
-				// {
-				// 	if(trace) cout << "\nk\n";
-
-				// 	program.addLine(new End(label));
-
-				// 	if(trace) cout << "\nl\n";
-				// }
+					if(trace) cout << "\nl\n";
+				}
 				// else if(startsWith(line, "go to"))
 				// {
 				// 	if(trace) cout << "\nm\n";

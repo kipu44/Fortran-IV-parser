@@ -6,15 +6,20 @@ MODULS =	\
 			block.o \
 			comment.o \
 			declarator.o \
+			end.o \
 			executableStatement.o \
 			format.o \
 			inOutStatement.o \
 			inStatement.o \
 			label.o \
 			line.o \
+			nonexecutableStatement.o \
+			outStatement.o \
 			program.o \
 			read.o \
-			statement.o
+			statement.o \
+			stop.o \
+			write.o
 
 main: main.cpp utils.o ${MODULS}
 	g++ -o main ${OPTIONS} main.cpp utils.o ${MODULS}
