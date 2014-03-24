@@ -154,7 +154,7 @@ string prawyArgument(const string & text)
 	}
 }
 //----------------------------------------------------------------
-string parsuj(string text)
+string parse(string text)
 {
 	static const bool trace = 0;
 

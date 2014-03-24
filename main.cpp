@@ -1,5 +1,5 @@
 
-// #include "aritmeticStatement.h"
+#include "aritmeticStatement.h"
 // #include "aritmeticIf.h"
 #include "end.h"
 #include "format.h"
@@ -137,14 +137,14 @@ void translate(const char * fileName)
 
 				// 	if(trace) cout << "\nn\n";
 				// }
-				// else
-				// {
-				// 	if(trace) cout << "\np\n";
+				else
+				{
+					if(trace) cout << "\np\n";
 
-				// 	program.addLine(new AritmeticStatement(line, label));
+					program.addLine(new AritmeticStatement(line, label));
 
-				// 	if(trace) cout << "\nq\n";
-				// }
+					if(trace) cout << "\nq\n";
+				}
 
 				if(trace) cout << "\n7\n";
 			}

@@ -17,6 +17,6 @@ bool startsWith(const string & text, const string & begin);
 size_t opening(const string & text, const int & end);
 size_t closure(const string & text, const int & begin);
 
-string parsuj(string text);
+string parse(string text);
 
 #endif
